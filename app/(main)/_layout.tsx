@@ -1,10 +1,10 @@
-import { Slot } from "expo-router";
+import { Redirect, Slot } from "expo-router";
 import { useState } from "react";
 import { ActivityIndicator } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
 export default function AppLayout() {
-    const [loading, setLoading] = useState<boolean>(false);
+    const [loading, setLoading] = useState(false);
     if (loading) {
         return (
             <SafeAreaView className="bg-white h-full flex justify-center items-center">
@@ -12,6 +12,6 @@ export default function AppLayout() {
             </SafeAreaView>
         )
     }
-
-    return <Slot />
+    return <Redirect href='/login' />
+    // return <Slot />
 }
