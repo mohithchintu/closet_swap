@@ -1,17 +1,23 @@
-import { Redirect, Slot } from "expo-router";
-import { useState } from "react";
-import { ActivityIndicator } from "react-native";
-import { SafeAreaView } from "react-native-safe-area-context";
+import { Redirect, Stack, Tabs } from "expo-router";
+import { useAuth } from "@clerk/clerk-expo";
 
-export default function AppLayout() {
-    const [loading, setLoading] = useState(false);
-    if (loading) {
-        return (
-            <SafeAreaView className="bg-white h-full flex justify-center items-center">
-                <ActivityIndicator className="text-primary-300" size="large" />
-            </SafeAreaView>
-        )
+
+export default function TabLayout() {
+    const { isSignedIn } = useAuth();
+
+    if (!isSignedIn) {
+        return <Redirect href="/auth" />;
     }
-    return <Redirect href='/login' />
-    // return <Slot />
+
+    //   if (isSignedIn && user?.unsafeMetadata?.onboarding_completed !== true) {
+    //     return <Redirect href="/auth/complete-your-account" />;
+    //   }
+
+    return (
+        <Stack>
+            <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+            {/* <Stack.Screen name="profile" options={{ headerShown: false }} /> */}
+            {/* <Stack.Screen name="cart" options={{ headerShown: false }} /> */}
+        </Stack>
+    );
 }

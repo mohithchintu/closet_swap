@@ -5,7 +5,7 @@ import {
 import { SafeAreaView } from "react-native-safe-area-context";
 
 
-const Seaech = () => {
+const Search = () => {
 
     return (
         <SafeAreaView className="h-full bg-white">
@@ -19,4 +19,4 @@ const Seaech = () => {
     );
 };
 
-export default Seaech;
+export default Search;

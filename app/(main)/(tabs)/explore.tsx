@@ -11,7 +11,7 @@ const Explore = () => {
         <SafeAreaView className="h-full bg-white">
             <View className="px-5">
                 <Text className="text-base">
-                    Explore Page
+                    Explore Page yui
                 </Text>
             </View>
         </SafeAreaView>

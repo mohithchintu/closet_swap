@@ -1,11 +1,11 @@
 {
   "expo": {
-    "name": "closet_swap",
-    "slug": "closet_swap",
+    "name": "closet-swap",
+    "slug": "closet-swap",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/images/icon.png",
-    "scheme": "app",
+    "icon": "./assets/images/closet.png",
+    "scheme": "myapp",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
@@ -13,15 +13,14 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/images/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
-      },
-      "package": "com.closet_swap.app"
+        "foregroundImage": "./assets/icons/swap.png",
+        "backgroundColor": "#f1f5f9"
+      }
     },
     "web": {
       "bundler": "metro",
       "output": "static",
-      "favicon": "./assets/images/favicon.png"
+      "favicon": "./assets/icons/google.png"
     },
     "plugins": [
       "expo-router",
@@ -37,14 +36,6 @@
     ],
     "experiments": {
       "typedRoutes": true
-    },
-    "extra": {
-      "router": {
-        "origin": false
-      },
-      "eas": {
-        "projectId": "8a28d64a-f659-4602-8083-33b2a6d3b9dd"
-      }
     }
   }
 }
